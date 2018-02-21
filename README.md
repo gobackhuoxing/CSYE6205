@@ -3,3 +3,5 @@
 University register application (Polymorphism and Inheritance)
 ## Assignment2
 Students and Employees information(factory pattern)
+## Week6-lab-sort
+Implement sort methods by age, GPA, and wage
