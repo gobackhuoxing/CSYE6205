@@ -20,18 +20,19 @@ Item::~Item() {
 }
 
 Item Item::opPlusTen(const Item& i){
-	return Item(i.ID,i.name,i.price+10);
+	return Item(i.ID,i.name,(i.price+100));
 }
 
 void Item::show(){
 	std::cout<<this->ID<<", "<<this->name<<", "<<this->price<<std::endl;
+	//std::cout << this << std::endl;
 }
 
 void Item::setPrice(int price) {
 	this->price = price;
 }
 
-std::ostream &operator<<(std::ostream & output, const Item& i) {
+std::ostream & operator<<(std::ostream & output, const Item& i){
 
 	std::string str = "Item: " + std::to_string(i.getId())
 			+ ", " + i.getName()
@@ -41,10 +42,10 @@ std::ostream &operator<<(std::ostream & output, const Item& i) {
 	return output;
 }
 
-Item &operator +(Item& i,const int n){
-	i.setPrice(i.price+n);
-	return i;
-}
+//Item &operator +(Item& i,const int n){
+//	i.setPrice(i.price+n);
+//	return i;
+//}
 
 void Item::demo(){
 	std::cout<<"Item demo:"<<std::endl;
@@ -64,10 +65,18 @@ void Item::demo(){
 	}
 
 
-	std::cout<<a.max(b)<< std::endl;
-//	std::transform(item, item+3, item, opPlusTen);
+	//std::cout<<a.max(b)<< std::endl;
+	std::transform(item, item+3, item, opPlusTen);
 
+	for(auto it: item){
+			it.show();
+		}
 
+	std::transform(items.begin(), items.end(), items.begin(), opPlusTen);
+
+		for(auto it: item){
+				it.show();
+			}
 }
 
 } /* namespace csye6205 */

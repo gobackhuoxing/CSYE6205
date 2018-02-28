@@ -28,7 +28,7 @@ public:
 	static void demo();
 
 	void show();
-	Item opPlusTen(const Item& i);
+	static Item opPlusTen(const Item& i);
 
 	int getId() const {
 		return ID;
@@ -38,12 +38,12 @@ public:
 		return name;
 	}
 
-	int getPrice() const {
+	int getPrice() const{
 		return price;
 	}
 
-	friend std::ostream &operator<<(std::ostream& output, const Item& i);
-	friend Item &operator+(Item& i,const int n);
+	friend std::ostream & operator<<(std::ostream& output, const Item& i);
+//	Item &operator+(Item& i,const int n);
 
 	void setId(int id) {
 		ID = id;

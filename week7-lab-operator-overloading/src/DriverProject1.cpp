@@ -15,7 +15,7 @@ using namespace neu::edu::csye6205;
 
 int main() {
 	cout << "main starting..." << endl; // prints main starting...
-//	neu::edu::csye6205::Item::demo();
+	neu::edu::csye6205::Item::demo();
 //	Chart<Item> obj;
 //	Item a(1,"a",10);
 //	Item b(2,"b",20);
@@ -24,7 +24,7 @@ int main() {
 //	obj.add(b);
 //	obj.add(c);
 //	obj.show();
-	Chart<Item>::demo();
+	//<Item>::demo();
 	cout << "main ending..." << endl; // prints main starting...
 	return 0;
 }
