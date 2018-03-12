@@ -30,35 +30,14 @@ void Store::addItem(Item *item){
 }
 
 void Store::sortInventory(){
-	if(inventory.front()->getType()=="Bread"){
-		std::sort(inventory.begin(), inventory.end(), Bread::sort);
-	}
-	else if(inventory.front()->getType()=="Electronics"){
-		std::sort(inventory.begin(), inventory.end(), Electronics::sort);
-	}
-	else if(inventory.front()->getType()=="HealthyBread"){
-		std::sort(inventory.begin(), inventory.end(), HealthyBread::sort);
-	}
+	std::sort(inventory.begin(), inventory.end(), Item::sort);
 }
 
 void Store::showInventory() {
 	std::cout << this->inventory.size() << " items in " << this->getName() << " Inventory" << std::endl;
 	for (Item *itemPtr : this->inventory) {
-		std::cout << itemPtr->info() << std::endl;
+		std::cout << *itemPtr << std::endl;
 	}
-}
-
-std::ostream & operator<< (std::ostream & output, const Item& i){
-	std::string str = "Item: " + std::to_string(i.getItemNumber())
-			+ ", " + i.getName()
-			+ " price: " + std::to_string(i.getPrice());
-
-//	if(i.getCalories()!=0){
-//			str= str+" calories: " + std::to_string(i.getCalories());
-//		}
-
-	output << str;
-	return output;
 }
 
 } /* namespace csye6205 */

@@ -24,11 +24,13 @@ public:
 	Item(int _itemNumber,double _price,std::string _name, std::string _type);
 	virtual ~Item();
 
-	virtual float getCalories() {
-				return 0;
+	virtual float get() const {
+			return 0;
 	}
 
-	std::string info();
+	static bool sort(Item *a, Item *b);
+
+	virtual double by();
 
 	int getItemNumber() const {
 		return itemNumber;
@@ -61,6 +63,8 @@ public:
 	void setType(const std::string& type) {
 		this->type = type;
 	}
+
+	friend std::ostream & operator<< (std::ostream & output, const Item& i);
 };
 
 } /* namespace csye6205 */

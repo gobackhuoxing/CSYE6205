@@ -21,17 +21,15 @@ public:
 	HealthyBread(int _itemNumber,double _price,float _calories,std::string _name);
 	virtual ~HealthyBread();
 
-
-
-	static bool sort(Item *a, Item *b);
-
-	float getCalories() {
+	float get() const{
 		return calories;
 	}
 
 	void setCalories(float calories) {
 		this->calories = calories;
 	}
+
+	double by();
 };
 
 } /* namespace csye6205 */

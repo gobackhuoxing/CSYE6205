@@ -21,8 +21,8 @@ HealthyBread::~HealthyBread() {
 	// TODO Auto-generated destructor stub
 }
 
-bool HealthyBread::sort(Item *a, Item *b){
-	return a->getCalories()>b->getCalories();
+double HealthyBread::by(){
+	return this->get();
 }
 
 } /* namespace csye6205 */

@@ -18,8 +18,6 @@ class Bread : public Item {
 public:
 	Bread(int _itemNumber,double _price,std::string _name);
 	virtual ~Bread();
-
-	static bool sort(Item *a, Item *b);
 };
 
 } /* namespace csye6205 */

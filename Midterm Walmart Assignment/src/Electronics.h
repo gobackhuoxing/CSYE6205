@@ -20,7 +20,6 @@ public:
 	virtual ~Electronics();
 
 	void sortInventory();
-	static bool sort(Item *a, Item *b);
 };
 
 } /* namespace csye6205 */

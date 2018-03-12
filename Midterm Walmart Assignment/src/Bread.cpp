@@ -22,10 +22,6 @@ Bread::~Bread() {
 	// TODO Auto-generated destructor stub
 }
 
-bool Bread::sort(Item *a, Item *b){
-	return a->getItemNumber()>b->getItemNumber();
-}
-
 } /* namespace csye6205 */
 } /* namespace neu */
 } /* namespace edu */

@@ -21,10 +21,6 @@ Electronics::~Electronics() {
 }
 
 
-bool Electronics::sort(Item *a, Item *b){
-	return a->getPrice()>b->getPrice();
-}
-
 } /* namespace csye6205 */
 } /* namespace neu */
 } /* namespace edu */

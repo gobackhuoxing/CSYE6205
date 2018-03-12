@@ -20,14 +20,26 @@ Item::~Item() {
 	// TODO Auto-generated destructor stub
 }
 
-std::string Item::info() {
-	std::string str = "Item: " + std::to_string(this->getItemNumber())
-				+ ", " + this->getName()
-				+ " price: " + std::to_string(this->getPrice());
-	if(this->getCalories()!=0){
-		str= str+" calories: " + std::to_string(this->getCalories());
+
+bool Item::sort(Item *a, Item *b){
+	return a->by()<b->by();
+}
+
+double Item::by(){
+		return this->getPrice();
 	}
-	return str;
+
+std::ostream & operator<< (std::ostream & output, const Item& i){
+	std::string str = "Item: " + std::to_string(i.getItemNumber())
+			+ ", " + i.getName()
+			+ " price: " + std::to_string(i.getPrice());
+
+	if(i.get()!=0){
+			str= str+" calories: " + std::to_string(i.get());
+		}
+
+	output << str;
+	return output;
 }
 
 } /* namespace csye6205 */

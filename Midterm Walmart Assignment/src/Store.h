@@ -40,9 +40,6 @@ public:
 		return name;
 	}
 
-	friend std::ostream & operator<< (std::ostream & output, const Item& i);
-
-	static void demo();
 };
 
 } /* namespace csye6205 */
