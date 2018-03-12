@@ -7,3 +7,5 @@ Students and Employees information(factory pattern)
 Implement sort methods by age, GPA, and wage
 ## Week7-lab-operator-overloading
 Operator overloading, transform, and templates
+## Midterm Walmart Assignment
+Operator overloading, sort
