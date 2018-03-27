@@ -3,6 +3,8 @@
 University register application (Polymorphism and Inheritance)
 ## Assignment2
 Students and Employees information(factory pattern)
+## Assignment3
+Bookstore(factory pattern, Operator overloading, sort, lambda)
 ## Week6-lab-sort
 Implement sort methods by age, GPA, and wage
 ## Week7-lab-operator-overloading
